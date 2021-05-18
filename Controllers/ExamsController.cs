@@ -3,7 +3,8 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-using gs_api.Models;
+using gs_api.Models.Responses;
+using Newtonsoft.Json.Serialization;
 
 namespace gs_api.Controllers
 {
@@ -11,27 +12,39 @@ namespace gs_api.Controllers
     [ApiController]
     public class ExamsController : ControllerBase
     {
-        private List<Exam> loadExams()
+        private GetExamsResponse loadExams()
         {
             using (StreamReader sr = new StreamReader("Mocks/pplExams.json"))
             {
               string json = sr.ReadToEnd();
-              List<Exam> exams = JsonConvert.DeserializeObject<List<Exam>>(json);
-              return exams;
+              GetExamsResponse res = JsonConvert.DeserializeObject<GetExamsResponse>(json);
+              return res;
             }
         }
 
         // GET api/exams
         // [HttpGet("api/exams")]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<string> Get()
         {
-          var exams = new List<string>();
-          var jsonExams = loadExams();
-          jsonExams.ForEach(json => {
-            exams.Add(JsonConvert.SerializeObject(json));
-          });
-          
-          return exams;
+            var exams = new List<string>();
+            var jsonExams = loadExams();
+
+            var contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            return JsonConvert.SerializeObject(jsonExams, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            // jsonExams.AvailableExams.ForEach(json => {
+            //     exams.Add(JsonConvert.SerializeObject(json));
+            // });
+            
+            // return exams;
         }
 
         // GET api/values/5

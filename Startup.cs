@@ -25,6 +25,10 @@ namespace gs_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(c =>  
+            {  
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -41,6 +45,9 @@ namespace gs_api
             }
 
             app.UseHttpsRedirection();
+
+            // Allow CORS
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseMvc();
         }
     }

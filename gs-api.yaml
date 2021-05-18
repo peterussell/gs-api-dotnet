@@ -6,6 +6,9 @@ info:
     email: groundschoolnz@gmail.com
 host: gs-api-prod.appspot.com
 basePath: /api
+x-google-endpoints:
+- name: gs-api-prod.appspot.com
+  allowCors: True
 paths:
   /exams:
     get:
