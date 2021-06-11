@@ -1,7 +1,7 @@
 {
   "availableExams": [
     {
-      "id": "1",
+      "id": "ppl-1",
       "name": "Air Law",
       "licenseType": "ppl",
       "slug": "air-law",
@@ -14,7 +14,7 @@
       }
     },
     {
-      "id": "2",
+      "id": "ppl-2",
       "name": "Air Tech",
       "licenseType": "ppl",
       "slug": "air-tech",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "3",
+      "id": "ppl-3",
       "name": "Flight Radio",
       "slug": "flight-radio",
       "licenseType": "ppl",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "4",
+      "id": "ppl-4",
       "name": "Human Factors",
       "licenseType": "ppl",
       "slug": "human-factors",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "5",
+      "id": "ppl-5",
       "name": "Meteorology",
       "licenseType": "ppl",
       "slug": "meteorology",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "id": "6",
+      "id": "ppl-6",
       "name": "Nav & Flight Planning",
       "licenseType": "ppl",
       "slug": "nav-flight-planning",
@@ -75,6 +75,123 @@
       "aspeqExamInfo": {
         "durationMinutes": 70,
         "numberOfQuestions": 25,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-1",
+      "name": "Air Law",
+      "licenseType": "cpl",
+      "slug": "air-law",
+      "availableQuestions": 76,
+      "aspeqName": "CPL Air Law (Aeroplane)",
+      "aspeqExamInfo": {
+        "durationMinutes": 120,
+        "numberOfQuestions": 60,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-2",
+      "name": "Air Tech",
+      "licenseType": "cpl",
+      "slug": "air-tech",
+      "availableQuestions": 36,
+      "aspeqName": "CPL General Aircraft Technical Knowledge (Aeroplane)",
+      "aspeqExamInfo": {
+        "durationMinutes": 120,
+        "numberOfQuestions": 45,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-3",
+      "name": "Human Factors",
+      "slug": "human-factors",
+      "licenseType": "cpl",
+      "availableQuestions": 72,
+      "aspeqName": "CPL Human Factors",
+      "aspeqExamInfo": {
+        "durationMinutes": 90,
+        "numberOfQuestions": 40,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-4",
+      "name": "Meteorology",
+      "licenseType": "cpl",
+      "slug": "meteorology",
+      "availableQuestions": 32,
+      "aspeqName": "CPL Meteorology",
+      "aspeqExamInfo": {
+        "durationMinutes": 120,
+        "numberOfQuestions": 50,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-5",
+      "name": "Navigation",
+      "licenseType": "cpl",
+      "slug": "nav-general",
+      "availableQuestions": 96,
+      "aspeqName": "CPL Flight Navigation General",
+      "aspeqExamInfo": {
+        "durationMinutes": 180,
+        "numberOfQuestions": 45,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "cpl-6",
+      "name": "Principles of Flight",
+      "licenseType": "cpl",
+      "slug": "principles-of-flight",
+      "availableQuestions": 84,
+      "aspeqName": "CPL Principles of Flight & Aircraft Performance",
+      "aspeqExamInfo": {
+        "durationMinutes": 120,
+        "numberOfQuestions": 45,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "ir-1",
+      "name": "Air Law",
+      "licenseType": "ir",
+      "slug": "air-law",
+      "availableQuestions": 76,
+      "aspeqName": "IR Air Law",
+      "aspeqExamInfo": {
+        "durationMinutes": 120,
+        "numberOfQuestions": 60,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "ir-2",
+      "name": "Navigation",
+      "licenseType": "ir",
+      "slug": "nav",
+      "availableQuestions": 62,
+      "aspeqName": "IR Flight Navigation (IFR)",
+      "aspeqExamInfo": {
+        "durationMinutes": 180,
+        "numberOfQuestions": 60,
+        "allowedMaterials": []
+      }
+    },
+    {
+      "id": "ir-3",
+      "name": "Instruments & Nav Aids",
+      "slug": "instruments-navaids",
+      "licenseType": "ir",
+      "availableQuestions": 47,
+      "aspeqName": "IR Instruments and Navigation Aids",
+      "aspeqExamInfo": {
+        "durationMinutes": 90,
+        "numberOfQuestions": 30,
         "allowedMaterials": []
       }
     }

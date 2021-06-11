@@ -34,17 +34,14 @@ namespace gs_api.Controllers
                 NamingStrategy = new CamelCaseNamingStrategy()
             };
 
-            return JsonConvert.SerializeObject(jsonExams, new JsonSerializerSettings
-            {
-                ContractResolver = contractResolver,
-                Formatting = Formatting.Indented
-            });
-
-            // jsonExams.AvailableExams.ForEach(json => {
-            //     exams.Add(JsonConvert.SerializeObject(json));
-            // });
-            
-            // return exams;
+            return JsonConvert.SerializeObject(
+              jsonExams,
+              new JsonSerializerSettings
+              {
+                  ContractResolver = contractResolver,
+                  Formatting = Formatting.Indented,
+              }
+            );
         }
 
         // GET api/values/5
